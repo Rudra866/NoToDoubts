@@ -1,0 +1,836 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+
+footer {
+  position: fixed;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  z-index: 100;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+.App-header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.App-header nav a:hover {
+  color: #4da6ff;
+}
+
+.introduction, .features, .cta {
+  padding: 2rem;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.features {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature {
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.feature:hover {
+  background-color: #f8f8f8;
+}
+
+.cta button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.cta button:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+.cta a {
+  color: #007bff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.cta a:hover {
+  background-color: #f8f8f8;
+}
+
+footer a {
+  color: #4da6ff;
+  padding: 1rem;
+
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+main{
+  flex-grow: 1;
+  background-color: #1a1a1a;
+  padding-bottom: 70px;
+  margin-top: 70px;
+  padding-top: 70px;
+
+}
+.LoginAndSignUp{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.login-form{
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-input::placeholder {
+  color: white;
+}
+
+.logo{
+  position: relative;
+  top: -5px;
+  left: 0;
+  width: 50px;
+  height: auto;
+}
+.login-button, .Sign-Up-button {
+  padding: 8px 15px;
+  background-color:#4da6ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-left: 0.5rem;
+}
+
+.login-button:hover, .Sign-Up-button:hover {
+  background-color: #0056b3;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.header-nav, .auth-buttons {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+  }
+
+  .auth-buttons {
+    margin: 1rem 0;
+  }
+}
+
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 50px);
+  padding: 2rem;
+  background-color: #1a1a1a;
+}
+
+.sign-up-title {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.sign-up-form{
+  width: 100%;
+  max-width: 320px;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color:#1a1a1a;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.sign-up-input,.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #4da6ff;
+  border-radius: 4px;
+  background-color: #333333;
+  color: white;
+}
+
+.sign-up-input::placeholder {
+  color: #ccc;
+}
+.table-container {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 51px;
+}
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: white;
+}
+
+.channels-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.channels-table .action-button ,.action-button {
+  background-color: #4da6ff;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 15px;
+  transition: background-color 0.3s;
+}
+
+.channels-table th, .channels-table td {
+  color: white;
+  padding: 0.5rem;
+  border-bottom: 1px solid #333;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  overflow: auto;
+  background-color: #4da6ff;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #1a1a1a ;
+  color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 20%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+}
+.modal-content input,
+.modal-content textarea,
+.modal-content button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #4da6ff;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+.modal-content input::placeholder, .modal-content textarea::placeholder {
+  color: #ccc;
+}
+.modal-content button {
+  background-color: #4da6ff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+    margin: 20% auto;
+  }
+}
+.modal.show {
+  display: block;
+}
+
+/* Add these styles to your CSS file */
+.confirm-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+.confirm-dialog-content {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 400px; /* Adjust width as needed */
+}
+
+.confirm-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirm-dialog-actions button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Use your application's button colors */
+}
+
+.confirm-dialog-actions button:first-child {
+  background-color:  #1a1a1a;
+  color: white;
+}
+
+.confirm-dialog-actions button:last-child {
+  background-color: #4da6ff;
+  color: white;
+}
+
+.confirm-dialog-actions button:first-child:hover{
+  background-color: white;
+  color: #4da6ff;
+}
+.confirm-dialog-actions button:last-child:hover{
+  background-color: #0056b3;
+}
+.channel-detail-container {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  margin-top: 70px;
+  min-height: calc(100vh - 120px);
+}
+
+.channel-title {
+  color: white;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.message-input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.title-label, .message-label {
+  color: white;
+}
+
+.title-input, .message-textarea {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.send-message-button {
+  background-color: #4da6ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  align-self: flex-start;
+}
+
+.send-message-button:hover {
+  background-color: #0056b3;
+}
+
+.upload-screenshot-button {
+  background-color: #4da6ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.upload-screenshot-button:hover {
+  background-color: #0056b3;
+}
+
+.message-board {
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  padding: 1rem;
+}
+.qa-textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #4da6ff;
+  background-color: #333;
+  color: #ccc;
+  border-radius: 4px;
+  resize: none;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.qa-textarea:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+.qa-textarea:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.reply-container {
+  margin-bottom: 3rem;
+}
+
+.reply-button, .send-reply-button, .cancel-reply-button {
+  background-color: #4da6ff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.reply-button:hover, .send-reply-button:hover, .cancel-reply-button:hover {
+  background-color: #0056b3;
+}
+
+.reply-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #4da6ff;
+  background-color: #333;
+  color: #ccc;
+  border-radius: 4px;
+  resize: none;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.reply-textarea:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+.cancel-reply-button {
+  background-color: #6c757d;
+}
+
+.cancel-reply-button:hover {
+  background-color: #5a6268;
+}
+/* Additional styles for the reply textarea */
+.reply-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #4da6ff;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  resize: none;
+}
+
+.reply-textarea:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+.reply-textarea:hover {
+  border-color: #66b3ff;
+}
+
+.reply-form button {
+  padding: 8px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-reply-button {
+  background-color: #4da6ff;
+  color: white;
+}
+
+.send-reply-button:hover {
+  background-color: #0056b3;
+}
+
+.cancel-reply-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-reply-button:hover {
+  background-color: #5a6268;
+}
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.qa-item {
+  background-color: #333;
+  color: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.qa-item:hover,
+.qa-item:focus {
+  background-color: #4da6ff;
+  transform: translateY(-3px);
+}
+
+.qa-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.qa-item[role="button"] {
+  outline: none;
+}
+
+.qa-item[role="button"]:focus .qa-title {
+  text-decoration: underline;
+}
+
+
+.question-details-container {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  margin: 70px 1rem 0;
+  border-radius: 8px;
+}
+
+.question-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.question-text {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.replies-list {
+  margin-top: 2rem;
+}
+
+.reply-item {
+  background-color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.search-box {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  margin-left: 1rem;
+  width: 20%;
+  background-color: #333;
+  color: white;
+}
+
+.search-box::placeholder {
+  color: #ccc;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+.search-box:hover {
+  border-color: #66b3ff;
+}
+/* User Management Styles */
+.user-management-container {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  margin: 70px 1rem 0;
+  border-radius: 8px;
+  color: white;
+}
+
+.user-management-container h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-management-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-management-item {
+  background-color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-management-item button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-management-item button:hover {
+  background-color: #cc0000;
+}
+.screenshot-upload {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screenshot-upload button {
+  background-color: #4da6ff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.screenshot-upload button:hover {
+  background-color: #0056b3;
+}
+.message-item {
+  background-color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  color: white;
+}
+
+.message-text {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.vote-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.vote-button {
+  background-color: #4da6ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vote-button:hover {
+  background-color: #0056b3;
+}
+.ranking-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.ranking-search input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border: 1px solid #4da6ff;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.ranking-search input::placeholder {
+  color: #ccc;
+}
+
+.ranking-search button {
+  padding: 0.5rem 1rem;
+  background-color: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ranking-search button:hover {
+  background-color: #0056b3;
+}
+
+.user-rankings {
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.user-rankings div {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+
+.user-rankings p {
+  margin: 0;
+  padding: 0;
+}
